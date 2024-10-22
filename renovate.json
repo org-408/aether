@@ -12,8 +12,17 @@
         {
             "matchDepTypes": ["devDependencies"],
             "automerge": true
+        },
+        {
+            "matchManagers": ["cargo"],
+            "automerge": true
         }
     ],
     "prHourlyLimit": 0,
-    "prConcurrentLimit": 5
+    "prConcurrentLimit": 5,
+    "cargo": {
+        "commitMessageTopic": "Rust crate {{depName}}",
+        "fileMatch": ["(^|/)Cargo\\.toml$"],
+        "versioning": "cargo"
+    }
 }
