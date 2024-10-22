@@ -1,0 +1,20 @@
+name: Renovate
+on:
+    schedule:
+        - cron: "0 * * * *"
+    push:
+        branches:
+            - develop
+            - main
+jobs:
+    renovate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Self-hosted Renovate
+              uses: renovatebot/github-action@v34.159.2
+              with:
+                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+              env:
+                  LOG_LEVEL: "debug"
