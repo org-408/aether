@@ -1,0 +1,63 @@
+[package]
+name = "aether-core"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Core library for Aether"
+documentation.workspace = true
+readme.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords = [ "actors", "actor-model", "async", "tokio" ]
+categories.workspace = true
+build = "build.rs"
+
+[dependencies]
+aether-message-derive = { version = "0.*", path = "../message-derive" }
+aether-utils = { version = "0.*", path = "../utils" }
+async-trait = { workspace = true }
+backtrace = { workspace = true }
+base64-string-rs = { workspace = true }
+chrono = { workspace = true }
+dashmap = { workspace = true }
+futures = { workspace = true }
+im = { workspace = true }
+num_enum = { workspace = true }
+once_cell = { workspace = true }
+oni-comb-uri-rs = { workspace = true }
+opentelemetry = { workspace = true, features = ["metrics"] }
+opentelemetry-otlp = { workspace = true, features = ["grpc-tonic", "trace", "metrics"] }
+opentelemetry-stdout = { workspace = true, features = ["metrics"] }
+opentelemetry_sdk = { workspace = true, features = ["metrics", "rt-tokio", "testing"] }
+prost = { workspace = true }
+prost-types = { workspace = true }
+rand = { workspace = true, features = ["small_rng"] }
+regex = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+siphasher = { workspace = true }
+static_assertions = { workspace = true }
+strum = { workspace = true, features = ["derive"] }
+strum_macros = { workspace = true }
+thiserror = { workspace = true }
+time = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tokio-condvar = { workspace = true }
+tonic = { workspace = true }
+tonic-types = { workspace = true }
+tracing = { workspace = true }
+tracing-futures = { workspace = true }
+tracing-opentelemetry = { workspace = true, features = ["metrics"] }
+tracing-subscriber = { workspace = true, features = ["env-filter"] }
+uuid = { workspace = true, features = ["v4"] }
+
+[dev-dependencies]
+clap = { workspace = true, features = ["derive"] }
+governor = { workspace = true }
+humantime = { workspace = true }
+rstest = { workspace = true }
+
+[build-dependencies]
+tonic-build = { workspace = true }

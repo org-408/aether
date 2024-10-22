@@ -1,0 +1,21 @@
+[package]
+name = "aether-utils"
+version = "0.2.0"
+edition = "2021"
+description = "Utility library for Aether"
+license = "MIT"
+keywords = [ "aether", "actor", "utils" ]
+categories = [ "concurrency", "asynchronous", "network-programming" ]
+readme = "../README.md"
+repository = "https://github.com/org-408/aether"
+
+[dependencies]
+futures = { workspace = true }
+async-trait = { workspace = true }
+dashmap = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tokio-condvar = "0.3.0"
+tracing = { workspace = true }
+
+

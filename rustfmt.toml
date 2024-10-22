@@ -1,0 +1,23 @@
+# Use 4 spaces for indentation
+tab_spaces = 4
+
+# Maximum width of each line
+max_width = 100
+
+# Use field initialize shorthand if possible
+use_field_init_shorthand = true
+
+# Reorder imports
+reorder_imports = true
+
+# Reorder modules
+reorder_modules = true
+
+# Use "Old" style of brackets for array types
+array_width = 60
+
+# Formatting of attribute macros on separate lines
+attr_fn_like_width = 70
+
+# Chain width for breaking
+chain_width = 60
