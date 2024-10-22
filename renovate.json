@@ -7,6 +7,9 @@
     "packageRules": [
         {
             "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+            "matchPackagePatterns": ["*"],
+            "groupName": "all dependencies",
+            "groupSlug": "all",
             "automerge": true
         },
         {
@@ -18,11 +21,16 @@
             "automerge": true
         }
     ],
+    "rust": {
+        "enabled": true,
+        "fileMatch": ["^Cargo.toml$", "^Cargo.lock$"]
+    },
+    "schedule": ["everyday"],
+    "labels": ["dependencies"],
+    "labels.dependencies": {
+        "color": "0025ff",
+        "automerge": true
+    },
     "prHourlyLimit": 0,
-    "prConcurrentLimit": 5,
-    "cargo": {
-        "commitMessageTopic": "Rust crate {{depName}}",
-        "fileMatch": ["(^|/)Cargo\\.toml$"],
-        "versioning": "cargo"
-    }
+    "prConcurrentLimit": 5
 }
