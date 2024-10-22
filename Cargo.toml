@@ -1,0 +1,16 @@
+[package]
+name = "aether"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "A high-performance actor framework in Rust"
+documentation = "https://docs.rs/aether"
+readme = "README.md"
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords = ["actor", "concurrent", "distributed", "framework"]
+categories = ["concurrency", "asynchronous"]
+
+[dependencies]
